@@ -1,4 +1,4 @@
-import { ArrowRight, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,15 +20,6 @@ const Hero = () => {
           bizjam is a community of innovators leveraging AI to create small businesses faster than ever.
           Join us in the hypercasual revolution of business creation.
         </p>
-        <div className="flex items-center justify-center mt-10 gap-x-6">
-          <a
-            href="#join"
-            className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white transition duration-300 rounded-lg gradient-bg hover:opacity-90"
-          >
-            Join the Community
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
-        </div>
       </div>
     </div>
   );

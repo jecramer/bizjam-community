@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ArrowRight } from "lucide-react";
 
 const JoinForm = () => {
   const { toast } = useToast();
@@ -88,7 +89,8 @@ const JoinForm = () => {
             disabled={isSubmitting}
             className="w-full gradient-bg hover:opacity-90"
           >
-            {isSubmitting ? "Submitting..." : "Submit Application"}
+            Join the Community
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </form>
