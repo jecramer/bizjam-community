@@ -10,10 +10,9 @@ const Hero = () => {
         <div className="animate-float">
           <Zap className="w-16 h-16 mx-auto mb-8 text-primary" />
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Build Your Business at{" "}
+        <h1 className="text-8xl font-bold tracking-tight text-gray-900">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-            Lightning Speed
+            BIZJAM
           </span>
         </h1>
         <p className="max-w-2xl mx-auto mt-6 text-lg leading-8 text-gray-600">
