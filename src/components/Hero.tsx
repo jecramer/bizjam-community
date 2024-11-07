@@ -22,7 +22,7 @@ const Hero = () => {
             BIZJAM
           </span>
         </h1>
-        <div className="max-w-4xl mx-auto mt-8 space-y-6 text-gray-600">
+        <div className="max-w-2xl mx-auto mt-8 space-y-6 text-gray-600">
           <p className="text-lg leading-relaxed">
             Inspired by the "hypercasual" revolution in mobile gaming, the Bizjam community is harnessing AI to accelerate B2C SaaS startups. Members leverage AI-powered tools to quickly build and test landing pages, prototypes and MVPs - rapidly iterating based on real user feedback to establish product-market fit.
           </p>
