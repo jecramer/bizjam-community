@@ -36,7 +36,7 @@ const JoinForm = () => {
   return (
     <div id="join" className="px-6 py-24 bg-white isolate sm:py-32 lg:px-8">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="mt-0 text-lg leading-8 text-gray-600 font-bold">
+        <p className="text-lg leading-8 text-gray-600 font-bold">
           Apply to join the bizjam Slack. Share ideas, get advice, and connect with others to build.
         </p>
       </div>
