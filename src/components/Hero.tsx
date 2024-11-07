@@ -15,10 +15,14 @@ const Hero = () => {
             BIZJAM
           </span>
         </h1>
-        <p className="max-w-2xl mx-auto mt-6 text-lg leading-8 text-gray-600">
-          bizjam is a community of innovators leveraging AI to create small businesses faster than ever.
-          Join us in the hypercasual revolution of business creation.
-        </p>
+        <div className="max-w-4xl mx-auto mt-8 space-y-6 text-gray-600">
+          <p className="text-lg leading-relaxed">
+            Inspired by the "hypercasual" revolution in mobile gaming, the Bizjam community is harnessing AI to accelerate B2C SaaS startups. Members leverage AI-powered tools to quickly build and test landing pages, prototypes and MVPs - rapidly iterating based on real user feedback to establish product-market fit.
+          </p>
+          <p className="text-lg leading-relaxed">
+            Eschewing traditional timelines, Bizjam champions a data-driven, fail-fast approach. As the boundaries between software and business continue blurring, this community is equipping founders with the tools and mindset to thrive in the coming "Cambrian Explosion" of niche, AI-driven applications.
+          </p>
+        </div>
       </div>
     </div>
   );
