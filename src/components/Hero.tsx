@@ -8,7 +8,14 @@ const Hero = () => {
       </div>
       <div className="container relative z-10 px-4 py-16 mx-auto text-center sm:px-6 sm:py-24 lg:px-8">
         <div className="animate-float">
-          <Zap className="w-16 h-16 mx-auto mb-8 text-primary" />
+          <Zap 
+            className="w-16 h-16 mx-auto mb-8 text-primary" 
+            style={{
+              background: 'linear-gradient(to bottom right, #FFC300, #FF5733)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }} 
+          />
         </div>
         <h1 className="text-8xl font-bold tracking-tight text-gray-900">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
