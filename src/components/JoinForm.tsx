@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 const JoinForm = () => {
   const { toast } = useToast();
@@ -10,8 +9,7 @@ const JoinForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    background: "",
-    interests: "",
+    linkedin: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,8 +27,7 @@ const JoinForm = () => {
     setFormData({
       name: "",
       email: "",
-      background: "",
-      interests: "",
+      linkedin: "",
     });
     setIsSubmitting(false);
   };
@@ -73,29 +70,17 @@ const JoinForm = () => {
             />
           </div>
           <div>
-            <label htmlFor="background" className="block text-sm font-medium text-gray-700">
-              Background
+            <label htmlFor="linkedin" className="block text-sm font-medium text-gray-700">
+              LinkedIn Profile URL
             </label>
-            <Textarea
-              id="background"
-              value={formData.background}
-              onChange={(e) => setFormData({ ...formData, background: e.target.value })}
+            <Input
+              type="url"
+              id="linkedin"
+              value={formData.linkedin}
+              onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
               required
               className="mt-2"
-              placeholder="Tell us about your background and experience"
-            />
-          </div>
-          <div>
-            <label htmlFor="interests" className="block text-sm font-medium text-gray-700">
-              What interests you about AI-powered business creation?
-            </label>
-            <Textarea
-              id="interests"
-              value={formData.interests}
-              onChange={(e) => setFormData({ ...formData, interests: e.target.value })}
-              required
-              className="mt-2"
-              placeholder="Share your thoughts and goals"
+              placeholder="https://linkedin.com/in/your-profile"
             />
           </div>
           <Button
