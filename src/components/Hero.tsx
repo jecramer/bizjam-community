@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
       </div>
-      <div className="container relative z-10 px-4 py-16 mx-auto text-center sm:px-6 sm:py-24 lg:px-8">
+      <div className="container relative z-10 px-4 py-8 mx-auto text-center sm:px-6 sm:py-12 lg:px-8">
         <div className="animate-float">
           <Zap 
             className="w-16 h-16 mx-auto mb-8 text-primary" 
