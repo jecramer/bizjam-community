@@ -62,24 +62,6 @@ const Hero = () => {
             Support us ➕
           </Button>
         </div>
-
-        <div className="mt-16">
-          <h2 className="text-xl mb-6">Our humble content library:</h2>
-          <div className="grid grid-cols-2 gap-4 max-w-3xl mx-auto">
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-              Recorded webinars 📺
-            </Button>
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-              First job in Finland ⭐
-            </Button>
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-              Marketing Salary 2023 ⬇️
-            </Button>
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-              Marketing Salary 2020 ⬇️
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );
