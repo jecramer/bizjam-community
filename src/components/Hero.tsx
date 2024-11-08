@@ -47,21 +47,6 @@ const Hero = () => {
         >
           Join us on Slack
         </Button>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12">
-          <Button variant="outline" className="border-white/20 text-black hover:bg-white/10">
-            Who we are ❤️
-          </Button>
-          <Button variant="outline" className="border-white/20 text-black hover:bg-white/10">
-            What we do ⭐
-          </Button>
-          <Button variant="outline" className="border-white/20 text-black hover:bg-white/10">
-            Events 📅
-          </Button>
-          <Button variant="outline" className="border-white/20 text-black hover:bg-white/10">
-            Support us ➕
-          </Button>
-        </div>
       </div>
     </div>
   );
