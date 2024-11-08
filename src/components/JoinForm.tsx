@@ -17,19 +17,35 @@ const JoinForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Replace with actual email submission logic
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Create mailto URL with form data
+      const subject = encodeURIComponent("New Bizjam Community Join Request");
+      const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+LinkedIn: ${formData.linkedin}
+      `);
+      
+      window.location.href = `mailto:bizjamco@gmail.com?subject=${subject}&body=${body}`;
 
-    toast({
-      title: "Application Submitted!",
-      description: "We'll review your application and get back to you soon.",
-    });
+      toast({
+        title: "Email Client Opened!",
+        description: "Please send the email to complete your application.",
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      linkedin: "",
-    });
+      setFormData({
+        name: "",
+        email: "",
+        linkedin: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error opening your email client.",
+        variant: "destructive",
+      });
+    }
+    
     setIsSubmitting(false);
   };
 
