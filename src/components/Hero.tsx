@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
 
         <h1 className="text-6xl md:text-8xl font-bold mb-8">
-          #1 Slack Community
+          Bizjam: #1 Slack Community for AI Innovators & Product Builders
         </h1>
 
         <div className="max-w-3xl mx-auto space-y-6 mb-12">
