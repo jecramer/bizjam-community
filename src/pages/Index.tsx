@@ -3,7 +3,7 @@ import JoinForm from "@/components/JoinForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Hero />
       <JoinForm />
     </div>
