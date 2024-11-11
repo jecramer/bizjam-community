@@ -18,30 +18,38 @@ const JoinForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Create mailto URL with form data
-      const subject = encodeURIComponent("New Bizjam Community Join Request");
-      const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-LinkedIn: ${formData.linkedin}
-      `);
-      
-      window.location.href = `mailto:bizjamco@gmail.com?subject=${subject}&body=${body}`;
-
-      toast({
-        title: "Email Client Opened!",
-        description: "Please send the email to complete your application.",
+      const response = await fetch("https://formsubmit.co/ajax/bizjamco@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          linkedin: formData.linkedin,
+          _subject: "New Bizjam Community Join Request",
+        }),
       });
 
-      setFormData({
-        name: "",
-        email: "",
-        linkedin: "",
-      });
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Your application has been submitted successfully.",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          linkedin: "",
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
     } catch (error) {
       toast({
         title: "Error",
-        description: "There was an error opening your email client.",
+        description: "There was an error submitting your application. Please try again.",
         variant: "destructive",
       });
     }
