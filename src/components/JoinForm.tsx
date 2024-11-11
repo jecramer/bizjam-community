@@ -18,13 +18,12 @@ const JoinForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/bizjamco@gmail.com", {
+      const response = await fetch("https://formsubmit.co/bizjamco@gmail.com", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({
+        body: new URLSearchParams({
           name: formData.name,
           email: formData.email,
           linkedin: formData.linkedin,
