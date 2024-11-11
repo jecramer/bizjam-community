@@ -18,7 +18,7 @@ const JoinForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/bizjamco@gmail.com", {
+      const response = await fetch("https://formsubmit.co/30d0af245a80b7b2ebc0594baa93e984", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
