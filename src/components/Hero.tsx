@@ -16,7 +16,7 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 pt-20 text-center text-white">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col justify-center items-center min-h-screen text-center text-white">
         <div className="animate-float mb-8">
           <Zap 
             className="w-16 h-16 mx-auto"
