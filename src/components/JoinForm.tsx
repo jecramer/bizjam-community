@@ -29,6 +29,8 @@ const JoinForm = () => {
           email: formData.email,
           linkedin: formData.linkedin,
           _subject: "New Bizjam Community Join Request",
+          _template: "table",
+          _captcha: false,
         }),
       });
 
