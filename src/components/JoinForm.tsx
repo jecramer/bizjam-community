@@ -25,9 +25,7 @@ const JoinForm = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          linkedin: formData.linkedin,
+          ...formData,
           _subject: "New Bizjam Community Join Request",
           _template: "table",
           _captcha: false,
@@ -36,10 +34,12 @@ const JoinForm = () => {
         }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         toast({
           title: "Success!",
-          description: "Your application has been submitted successfully.",
+          description: "Your application has been submitted successfully. Please check your email for confirmation.",
         });
 
         setFormData({
@@ -48,7 +48,7 @@ const JoinForm = () => {
           linkedin: "",
         });
       } else {
-        throw new Error("Failed to submit form");
+        throw new Error(data.message || "Failed to submit form");
       }
     } catch (error) {
       toast({
@@ -56,6 +56,7 @@ const JoinForm = () => {
         description: "There was an error submitting your application. Please try again.",
         variant: "destructive",
       });
+      console.error("Form submission error:", error);
     }
     
     setIsSubmitting(false);
