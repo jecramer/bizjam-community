@@ -31,6 +31,8 @@ const JoinForm = () => {
           _subject: "New Bizjam Community Join Request",
           _template: "table",
           _captcha: false,
+          _autoresponse: "Thank you for applying to join the Bizjam community! We've received your application and will send you an invite to join our Slack workspace soon. Looking forward to having you in our community!",
+          _autoresponse_subject: "Thanks for joining Bizjam - We'll be in touch soon!",
         }),
       });
 
